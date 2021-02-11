@@ -57,4 +57,18 @@ body
 	background-color: $accent
 	color: #fff
 
+header
+	display: flex
+	& .logo-container
+		flex: 1
+	& ul.nav-links
+
+		display: flex
+		flex: 1
+		& li
+			list-style-type: none
+	& button.login
+		background-color: $accent
+
+@import "./screens/_about"
 @import "media" // Всегда в конце
