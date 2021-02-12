@@ -1,4 +1,3 @@
-$headerHorizontalPadding: 55px
 $headerVerticalPadding: 15px
 $maxLogoSize: 70px
 
@@ -6,7 +5,7 @@ header
     display: flex
     justify-content: center
     align-items: center
-    padding: $headerVerticalPadding $headerHorizontalPadding
+    padding: $headerVerticalPadding $defaultHorizontalPadding
     @extend .bottom_box_shadow
     & .logo-container
         flex: 1
@@ -29,5 +28,5 @@ header
                     @extend .border_bottom
 
     & button.login
-        margin-left: $headerHorizontalPadding
+        margin-left: $defaultHorizontalPadding
         @extend .default_button
