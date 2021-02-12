@@ -1,0 +1,29 @@
+header
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 15px 55px
+    & .logo-container
+        flex: 1
+    & ul.nav-links
+        display: flex
+        flex: 1
+        justify-content: space-around
+        & li
+            list-style-type: none
+            &:hover
+                cursor: pointer
+                & p
+                    border-bottom: 2px solid rgba($accent, .2)
+            &.active
+                & p
+                    border-bottom: 2px solid $accent
+
+    & button.login
+        background-color: $accent
+        color: $light
+        padding: 12px 40px
+        border-radius: 24px
+        border: none
+        &:hover
+            background-color: rgba($accent, .8)
