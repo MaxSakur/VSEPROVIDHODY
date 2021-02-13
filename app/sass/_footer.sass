@@ -1,14 +1,69 @@
+$footerGap: 40px
+$footer_link_bottom_margin: 16px
+$footer_separate_height: 2px
+
 footer
-    padding: 0 $defaultHorizontalPadding
-    width: 100%
+    background-color: $footer
+    margin-top: $footerGap
+    // FOOTER LINKS BLOCK
     .footer_links
+        position: relative
+        padding: #{$footerGap} #{$footerGap*3}
+        background-color: $light
         display: flex
         justify-content: space-around
-        & ul
+        gap: 40px
+        &::before
+            content: ''
+            height: $footer_separate_height
+            background-color: $seporator
+            position: absolute
+            top: 0
+            left: #{$defaultHorizontalPadding}
+            right: #{$defaultHorizontalPadding}
 
+        & ul
+            flex: 1
+            display: flex
+            flex-direction: column
+            text-align: left
             & li
                 color: $shadow
                 list-style-type: none
-                @extend .header_3
+                margin-bottom: $footer_link_bottom_margin
+                font-family: $body
                 &:first-child
                     color: $dark
+
+    // FOOTER INFO SECTION
+    .footer_info
+        display: flex
+        justify-content: space-around
+        padding: $footerGap #{$footerGap*3}
+        gap: 40px
+        & ul
+            flex: 1
+            color: $light
+            & li
+                padding-bottom: $footer_link_bottom_margin
+        & .partners
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+            align-items: center
+            & li
+                display: flex
+                flex: 1
+                flex: 1 1 40%
+                height: 60px
+                align-items: center
+                & img
+                    position: relative
+                &:first-child
+                    flex: 1 1 100%
+                    align-items: self-start
+
+    & .socials
+        display: flex
+        padding: 0
+        gap: 16px
