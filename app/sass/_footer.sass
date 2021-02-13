@@ -12,7 +12,7 @@ footer
         background-color: $light
         display: flex
         justify-content: space-around
-        gap: 40px
+        gap: $footerGap
         &::before
             content: ''
             height: $footer_separate_height
@@ -40,7 +40,7 @@ footer
         display: flex
         justify-content: space-around
         padding: $footerGap #{$footerGap*3}
-        gap: 40px
+        gap: $footerGap
         & ul
             flex: 1
             color: $light
@@ -55,15 +55,15 @@ footer
                 display: flex
                 flex: 1
                 flex: 1 1 40%
-                height: 60px
                 align-items: center
                 & img
                     position: relative
                 &:first-child
                     flex: 1 1 100%
                     align-items: self-start
+                    margin: 0
 
     & .socials
         display: flex
         padding: 0
-        gap: 16px
+        gap: $footerGap / 2
