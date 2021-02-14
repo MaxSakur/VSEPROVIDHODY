@@ -2,26 +2,15 @@ $footerGap: 40px
 $footer_link_bottom_margin: 16px
 $footer_separate_height: 2px
 
-footer
-    background-color: $footer
-    margin-top: $footerGap
+.footer
     // FOOTER LINKS BLOCK
     .footer_links
-        position: relative
         padding: #{$footerGap} #{$footerGap*3}
-        background-color: $light
+        position: relative
+        background-color: transparent
         display: flex
         justify-content: space-around
         gap: $footerGap
-        &::before
-            content: ''
-            height: $footer_separate_height
-            background-color: $seporator
-            position: absolute
-            top: 0
-            left: #{$defaultHorizontalPadding}
-            right: #{$defaultHorizontalPadding}
-
         & ul
             flex: 1
             display: flex
@@ -36,8 +25,9 @@ footer
                     color: $dark
 
     // FOOTER INFO SECTION
-    .footer_info
+    &_info
         display: flex
+        background-color: $footer
         justify-content: space-around
         padding: $footerGap #{$footerGap*3}
         gap: $footerGap
@@ -67,3 +57,14 @@ footer
         display: flex
         padding: 0
         gap: $footerGap / 2
+        & li
+            & svg
+                height: 40px
+                width: 40px
+                &:hover
+                    color: $primary
+                    cursor: pointer
+    &_terms
+        padding: #{$footerGap/2} #{$footerGap*3}
+        color: $shadow
+        background-color: $footer

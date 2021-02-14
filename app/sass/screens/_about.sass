@@ -1,0 +1,22 @@
+$about_item_gap: 20px
+$border_radius: 8px
+
+.about
+    &_item
+        display: flex
+        gap: $about_item_gap
+        padding: $about_item_gap
+        background-color: $light
+        border-radius: $border_radius
+        &:not(:last-child)
+            margin-bottom: 16px
+
+        &--left
+
+            &__header
+                font-size: $about_item_header
+                font-weight: bold
+                margin-bottom: 24px
+            &__body
+        &--right
+            &__image

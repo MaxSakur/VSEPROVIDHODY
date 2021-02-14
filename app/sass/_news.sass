@@ -1,0 +1,25 @@
+$news_item_padding: 20px
+
+.news
+    &_container
+        display: flex
+        flex-flow: wrap
+        & .news_item
+            padding: $news_item_padding 0
+            flex: 1 0 33.3%
+            position: relative
+            & p.header
+                padding: $min_padding*2 0 $min_padding 0
+                font-size: 18px
+                font-family: $header_1
+            & img
+                width: 100%
+            & .date
+                font-size: 14px
+                color: rgba($dark, .42)
+            &:nth-child(3n+2)
+                padding: $news_item_padding
+            &:nth-child(3n+1)
+                padding-right: $news_item_padding*2
+            &:nth-child(3n)
+                padding-left: $news_item_padding*2
