@@ -1,0 +1,24 @@
+.search 
+  position: relative
+  width: 260px
+  background: #E5E5EF
+  border-radius: 100px
+  padding: 12px 24px 12px 48px
+
+  &:before
+    content: ''
+    position: absolute
+    left: 24px
+    top: 50%
+    transform: translate(0%, -50%)
+    width: 14px
+    height: 14px
+    background: url('../img/icons/ic-search.svg') no-repeat center / 14px 14px
+
+  &-input
+    border: none
+    width: 100%
+    border-radius: 100px
+    background-color: transparent
+    &:focus
+      outline: rgba(#E5E5EF, .1)

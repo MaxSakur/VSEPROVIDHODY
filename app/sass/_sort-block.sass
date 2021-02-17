@@ -1,0 +1,14 @@
+.sort-block 
+  display: inline-flex
+  &_item
+    @extend .title
+    
+    &:not(:last-child)
+      margin-right: 40px
+  // .sort-block_item
+
+  &_action
+    cursor: pointer
+    &:hover
+      color: $dark
+  // .sort-block_action
