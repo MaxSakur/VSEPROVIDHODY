@@ -7,6 +7,7 @@ header
     min-height: $headerMinHeight
     justify-content: center
     align-items: center
+    background: $light
     padding: $headerVerticalPadding $defaultHorizontalPadding
     @extend .bottom_box_shadow
     & .logo-container
@@ -28,7 +29,11 @@ header
             &.active
                 & p
                     @extend .border_bottom
-
+        a
+            &:visited,
+            &:hover
+                text-decoration: none
+                color: inherit
     & button.login
         margin-left: $defaultHorizontalPadding
         @extend .default_button
