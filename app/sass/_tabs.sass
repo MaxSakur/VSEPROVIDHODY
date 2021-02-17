@@ -1,0 +1,18 @@
+$nav-item-gap: 40px
+
+.tabs
+  &-nav
+    &_item
+      display: inline-block
+      padding-bottom: $min_padding * 1.5
+      @extend .title
+      cursor: pointer
+      border-bottom: 3px solid  $transparent 
+      &:not(:last-child)
+        margin-right: $nav-item-gap
+
+      &--active,
+      &:hover
+        color: $dark
+        font-weight: 600
+        border-color: $primary
