@@ -73,8 +73,14 @@ body
 		color: rgba($dark, .45)
 		font-size: $page_name
 		padding-bottom: $defaultHorizontalPadding / 4
-	a 
+	a:not([class])
 		color: inherit
+	&_filters
+		margin-bottom: 40px
+	&_pagination
+		margin-top: 80px
+		display: flex
+		justify-content: center
 
 .section
 	&_header
@@ -105,13 +111,32 @@ body
 
 // BUTTON PROPS
 .default_button
+	display: inline-block;
+	outline: rgba($primary, .2)
 	background-color: $primary
 	color: $light
 	padding: 12px 40px
-	border-radius: 24px
+	border-radius: 34px
 	border: none
+	text-decoration: none
+	transition: all .3s ease
 	&:hover
 		background-color: $primary_hover
+		text-decoration: none
+	&:visited
+		color: $light
+		text-decoration: none
+
+	&--outline
+		background-color: $transparent
+		color: $primary
+		border: 2px solid $primary
+		&:hover
+			background-color: $primary
+			color: $light
+		&:visited, &:active
+			color: $primary
+			text-decoration: none
 
 // DEFAULT BORDER
 .border_bottom
@@ -146,6 +171,7 @@ body
 @import './_tabs'
 @import './_search'
 @import './_sort-block'
+@import './filter'
 
 // SCREENS	
 @import "./screens/_about"

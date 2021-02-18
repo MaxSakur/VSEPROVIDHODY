@@ -20,10 +20,10 @@
 .info-content-card
   display: flex
   max-width: 1100px
-  padding-bottom: 40px
-  margin-bottom: 40px
 
   &:not(:last-child)
+    margin-bottom: 40px
+    padding-bottom: 40px
     @extend .border_bottom
     border-color: rgba($dark, .1)
 
@@ -43,3 +43,29 @@
     color: rgba($dark, .4)
   &_date
     margin-top: auto
+
+.info-card
+  background: #FFFFFF
+  border: 1px solid #F0F0F0
+  box-sizing: border-box
+  border-radius: 6px
+  overflow: hidden
+    
+  &_img
+    height: 227px
+  &_pic
+    height: 100%
+    width: 100%
+    object-fit: cover
+  &_body
+    padding: 32px 24px
+
+  &_tags 
+    margin-bottom: 20px
+  &_title
+    margin-bottom: 18px
+  &_txt
+    margin-bottom: 24px
+
+
+
